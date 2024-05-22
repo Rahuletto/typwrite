@@ -135,8 +135,7 @@ export default function Home() {
 
   return (
     <main
-      style="height: 100vh"
-      class="h-full grid grid-cols-[0.1fr_1fr] grid-rows-[0.1fr_1fr] gap-x-0 gap-y-0"
+      class="h-screen grid grid-cols-[0.1fr_1fr] grid-rows-[0.1fr_1fr] gap-x-0 gap-y-0"
     >
       <div class="flex items-center justify-center border-dashed border-dash border-r-2 border-b-2">
         <svg
