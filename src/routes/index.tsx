@@ -78,10 +78,7 @@ export default function Home() {
         setInterv(setInterval(() => setTimer((c) => c - 1), 1000));
         setIsTyping(true);
       } else {
-        if (characters[len].classList.contains("correct")) {
-          characters[len + 1].classList.remove("correct");
-        } else if (characters[len].classList.contains("incorrect")) {
-          characters[len + 1].classList.remove("incorrect");
+        if (characters[len].classList.contains("incorrect")) {
           setMistakes(mistakes() - 1);
         } else if (typedChar !== para()[len]) {
           characters[len].classList.add("incorrect");
@@ -92,6 +89,10 @@ export default function Home() {
 
         characters.forEach((span) => span.classList.remove("active"));
         characters[letter.length].classList.add("active");
+        
+        const tmp = [...characters]
+        tmp.slice(letter.length).forEach((span) => span.classList.remove("correct"));
+        tmp.slice(letter.length).forEach((span) => span.classList.remove("incorrect"));
 
         setWpm(Math.round(((len - mistakes()) / 5 / (max() - timer())) * 60));
         setWpm(wpm() < 0 || !wpm() || wpm() === Infinity ? 0 : wpm());
@@ -113,12 +114,12 @@ export default function Home() {
 
   return (
     <main class="text-center mx-auto text-gray-700 p-4">
-      <Input
+      <input
         id="input"
         value={input()}
-        onChange={(e) => {
-          setInput(e.detail.value);
-          typing(e.detail.value);
+        onInput={(e) => {
+          setInput(e.target.value);
+          typing(e.target.value);
         }}
         type="text"
         class="input-field"
