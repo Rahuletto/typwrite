@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.correct { color: green; }
-.incorrect { color: red; }
-.active { color: blue; }
+:root {
+    --bg: #231F1E;
+    --red: #D84444;
+    --color: #FFE8E2;
+    --disabled: #918480;
+    --accent: #E7856F;
+    --dash: #60423B;
+}
+
+* {
+    font-family: "Gloock", 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.active {
+    border-left: 2px solid var(--accent);
+}
+
+.incorrect {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
