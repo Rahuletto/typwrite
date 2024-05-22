@@ -1,9 +1,12 @@
 # Tipe
+> Pronounced as `/tʌɪp/`
+
+
 A type-testing website thats aesthetically pleasing with a sweet touch of that old retro style.
-> Just made to learn SolidJS. Where your fingers dance across the keyboard like nobody’s watching
+Where your fingers dance across the keyboard like nobody’s watching
 
 ### Why tipe?
-- No crap
+- No fuss
 - 0 distractions. Focus on the text
 - Aesthetically pleasing
 
