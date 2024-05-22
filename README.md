@@ -9,4 +9,4 @@ A type-testing website thats aesthetically pleasing with a sweet touch of that o
 - Aesthetically pleasing
 
 ### Screenshots:
-![preview](image.png)
+![preview](/public/image.png)
